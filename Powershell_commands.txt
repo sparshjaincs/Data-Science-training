@@ -1,0 +1,90 @@
+                                   # BASICS OF WINDOWS POWER SHELL
+
+Windows powershell is basically a Windows command -line shell which is
+especially designed  for system administrator.
+
+Windows powershell introduces the concept of cmdlet a simple, single function
+command line-tool built into the shell
+
+It allows us access to the file system of computer.
+
+It supports aliases to refers command by alternative name. Aliasing allows
+user with experience in other shells to use common commands that they already
+known for similar operation in powershell
+
+Powershell can be directly opened by searching powershell in search bar
+                        or
+it can be run ie. pressing win+r and then by writing powershell 
+
+                                  # THE CONCEPT OF PATH
+
+A path is unique location of a file or a folder in a file system of an OS.
+A path consist of / and alpha -numeric character.
+
+There are two types of path.
+
+ 1. Absolute path
+An Absolute path is defined as a compiler path from start of actual file
+system from / directory
+
+To write an absolute path name
+1. start a root directory and work down
+2. Write slash(/ )  after every directory name(last one is optional)
+
+EX.	To specify the path of Hello.txt, We started from the root directory
+ie. C: and then to USER/Admin/Documents/Hello.txt/
+
+
+cat C:/User/Admin/Documents/hello.txt
+
+2. Relatiive path
+A  Relative path is defined as a compiler path from present working directory
+to working file.
+
+Relative path name uses 
+-> .(a single dot) this represents the current directory
+-> ..(two dots) this represents the parent directory.
+Ex.	Now, we are presently working in Documnents directory and we have to
+	access ABC.csv 
+	Instead of specifying full absolute path from C: directory we can just
+	give the relative path to change parent directory.
+	cd ../Downloads
+	cat ABC.csv
+
+                                        # FILE SYSTEM  
+
+				        1. C
+	1.1 Program Files	1.2 Program files(x86)		1.3 Users
+1.4 Windows
+	1.3.1Admin 	1.3.2 User1 	1.3.3 User2
+	1.3.1.1Desktop	1.3.1.2 Documents 	1.3.1.3 Downloads
+1.3.1.4 Music
+	1.3.1.2.1 Hello.txt	1.3.1.3.1 ABC.csv
+
+
+			#POWERSHELL BASIC COMMANDS
+1. To check Power shell version --> $PSVersionTable
+2. To print statement on terminal --> echo
+3. To clear the terminal of cdmlet  --> Clear-host or clear  or clr
+4. To check the current directory we are currently working in, the alias
+	is,-->pwd
+5. To check the content of the folder -->ls
+6. to change the directory we want to work in, the alias used is-->
+	cd(directory name) or chdir(directory name)
+7. To read the manual of the commands or to get or to get help about a command
+	,the alias used is --> man(command name or alias)
+8. To create folder--> mkdir
+9. To create files --> New-Item-Path "full path here" -ItemType File
+10. To copy folder ---->cp -r(source path )(Destiation path)
+11. To remove folders -->rmdir
+12. To delete files the alias used is --> rm or ri
+13. To move folders as well as files alias used is---> mv(source path)(Destination path)
+14. To rename file or folder --->Rename-Item(Path of folder/file )(new name)
+15. To perform file operation The cmdlet are,
+	1.Set-Content(path of the file in which is to be written)"text to be
+	written"
+	2. Get-Content (path of the file ehich is to be read)
+	(#*# To read content of a file-->cat(path of the file)
+	3. Append-Content(path of the file in which is to be written)"Text to
+	be append"
+	4. Clear-Content(path of the file of which content is to be erased) 
